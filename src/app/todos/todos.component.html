@@ -1,0 +1,20 @@
+<h1 style="text-align: center;"> My Todos List</h1>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Target Date</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of todos">
+      <tr>
+        <td>{{ item.description }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.targetDate | date | uppercase }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

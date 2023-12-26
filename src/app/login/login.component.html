@@ -1,0 +1,15 @@
+<h1 style="text-align: center;">Login</h1>
+
+<div class="container">
+  <div class="alert alert-warning" *ngIf="invalidUser">{{ errorMessage }}</div>
+
+  <div style="text-align: center;">
+    Username: <input name="username" autocomplete="cc-name" type="text" [(ngModel)]="username" /> 
+    Password: <input name="password" type="password" [(ngModel)]="password" />
+    <button class="btn btn-success" type="submit" (click)="handleLogin()">
+      Login
+    </button>
+  </div>
+
+  {{ username }}
+</div>
